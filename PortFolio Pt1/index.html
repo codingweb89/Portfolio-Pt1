@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a personal portfiolo bro</title>
+</head>
+<body>
+    
+
+        <!-- <div class="whitebg"></div> -->
+        <div class="yellowbg"></div>
+
+        
+    <nav>
+        <div><h1>Uptodate <span>Academy</span></h1></div>
+        <div>
+            <img src="bars.png" alt="" class="opennv">
+            <div class="items">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Experiences</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page_desc">
+        <div>
+            <span>ui/ux designer & developer</span>
+            <h1>i'm john <br> Schmidt</h1>
+            <a href="#" class="about">more about me &rightarrow;</a>
+            <a href="#" class="hire">hire me &rightarrow;</a>
+            <footer>
+                <p>Copyright ©2023 All rights reserved | This template is made by <a href="#">Uptodate Academy</a></p>
+            </footer>
+        </div>
+        <div class="web_img">
+            <div>
+                <img src="img1.webp" alt="" class="userImg">
+            </div>
+        </div>
+    </div>
+
+    <div class="select_image">
+        <div><img src="img1.webp" alt="" class="img1"></div>
+        <div><img src="img2.webp" alt="" class="img2"></div>
+    </div>
+
+
+    <script>
+
+        const openNav = document.querySelector(".opennv");
+        const body = document.querySelector("body");
+        openNav.addEventListener("click", e => {
+            body.classList.toggle("open");
+            if(body.classList.contains("open")) {
+                openNav.src = "exit.png";
+            }else {
+                openNav.src = "bars.png";
+            }
+        })
+
+        const selectImage = document.querySelector(".select_image");
+        const img = selectImage.querySelectorAll("img");
+        img.forEach(img => {
+            img.addEventListener("click", e => {
+                if(e.currentTarget.classList.contains("img1")) {
+                    const userImg = document.querySelector(".userImg");
+                    userImg.src = "img1.webp";
+                }else if(e.currentTarget.classList.contains("img2")) {
+                    const userImg = document.querySelector(".userImg");
+                    userImg.src = "img2.webp";
+                }
+            })
+        })
+
+
+    </script>
+
+</body>
+</html>
